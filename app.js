@@ -2,9 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose")
 const app = express();
+const port=process.env.PORT || 3000;
 
-app.listen(3000, () => {
-  console.log("Application started and Listening on port 3000");
+app.listen(port, () => {
+  console.log(`Application started and Listening on port ${port}`);
 });
 app.use(express.static(__dirname));
 app.use(bodyParser.urlencoded({ extended: true }))
