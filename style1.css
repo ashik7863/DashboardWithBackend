@@ -459,85 +459,71 @@ td .status{
   .search-wrapper{
       display: none;
   }
-  
-  header h2{
-      display: flex;
-      align-items: center;
-  }
-  header h2 label{
-      display: inline-block;
-      background: var(--main-color);
-      padding-right: 0rem;
-      margin-right: 1rem;
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center !important;
-  }
-  header h2 span{
+  .sidebar.close{
+    left: -100% !important;
+}
+.sidebar{
+  top: 70px;
+}
+
+.home-section .home-content .bx-menu{
       text-align: center;
       padding-right: 0rem;
-  }
-  header h2{
-      font-size:1.1rem ;
+      display: inline-block;
+        background: var(--main-color);
+        padding-right: 0rem;
+        margin-right: 1rem;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        color: #fff;
+        align-items: center;
+        justify-content: center !important;
   }
   .main-content{
       width: 100%;
       margin-left: 0rem;
   }
-  header{
+  .home-section{
       width: 100% !important;
       left: 0 !important;
   }
   #nav-toggle:checked + .sidebar{
-      left: 0 !important;
-      z-index: 100;
-      width: 260px;
-  }
-  
-  #nav-toggle:checked + .sidebar .sidebar-brand,
-  #nav-toggle:checked + .sidebar:hover li {
-      padding-left: 2rem;
-      text-align: left;
-  }
-  #nav-toggle:checked + .sidebar:hover li a {
-      padding-left: 1rem;
-  }
-  #nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
-  #nav-toggle:checked + .sidebar li a span:last-child{
-      display: inline;
-  }
-  #nav-toggle:checked ~ .main-content{
-      margin-left: 0rem !important;
-  }
+    left: 0 !important;
+    z-index: 100;
+    width: 345px;
+}
 }
 @media only screen and (max-width: 560px){
     
   .cards{
       grid-template-columns: 100%;
-  }
+  } 
+}
+@media only screen and (max-width: 450px){
+  .user-wrapper{
+    display: none;
+}
  
 }
-@media (max-width: 400px) {
+@media (max-width: 300px) {
+  .sidebar{
+    width: 260;
+  }
   .sidebar.close .nav-links li .sub-menu{
     display: none;
   }
-  .sidebar{
-    width: 78px;
-  }
-  .sidebar.close{
+  
+  /*.sidebar.close{
     width: 0;
   }
   .home-section{
     left: 78px;
     width: calc(100% - 78px);
     z-index: 100;
-  }
+  }*/
   .sidebar.close ~ .home-section{
     width: 100%;
     left: 0;
-  }
+  } 
 }

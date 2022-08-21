@@ -59,12 +59,6 @@ app.post("/sign_up",async(req,res)=>{
         "confirmpassword":confirmpassword
     }
 
-    const userEmail=await Playlist.findOne({email: email});
-        
-    if(userEmail.email===email){
-        res.send("You have already an account....!");
-    }
-
     if(password===confirmpassword){
         db.collection('users').insertOne(data,(err,collection)=>{
             if(err){
